@@ -1,0 +1,40 @@
+@import 'common';
+
+html {
+  @include default-background-color();
+
+  body {
+    @include default-background-color();
+  }
+}
+
+.all {
+  margin-top: 110px;
+
+  > .clock {
+    @include text-color();
+    @include v-center();
+    margin-bottom: 70px;
+
+    > .date {
+      font-size: 30px;
+      font-weight: 100;
+    }
+
+    > .time {
+      font-size: 140px;
+      font-weight: 100;
+      line-height: 1.05;
+    }
+  }
+
+  > .start {
+    @include v-center(16px);
+    font-size: 14px;
+    white-space: nowrap;
+
+    > .be-button {
+      padding: 4px 24px;
+    }
+  }
+}
